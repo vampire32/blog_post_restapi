@@ -1,83 +1,66 @@
-# First Laravel PHP
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-A simple example of how to create a RESTful API in Laravel Framework 8.36.1.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-I used Database **sqlite** because I wanted to deploy this project very quickly and easy.
-You can easily change the type of database and its connection in the **[config file](.env)**.
+## About Laravel
 
-## Endpoints
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-**Get all posts:** `GET /api/posts`
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-**Get a single post:** `GET /api/posts/{id}`
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-**Create a new post:** `POST /api/posts`
+## Learning Laravel
 
-**Update a post:** `PUT /api/posts/{id}`
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-**Delete a post:** `DELETE /api/posts/{id}`
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-## Routes
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-```
-Route::get('/posts', [PostsApiController::class, 'index']);
-Route::get('/post/{post}', [PostsApiController::class, 'get']);
-Route::post('/posts', [PostsApiController::class, 'store']);
-Route::put('/posts/{post}', [PostsApiController::class, 'update']);
-Route::delete('/posts/{post}', [PostsApiController::class, 'destroy']);
-```
+## Laravel Sponsors
 
-### Laravel artisan commands
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-```
-php artisan --version
-rm database/database.sqlite 
-sqlite3 database/database.sqlite "create table aTable(field1 int); drop table aTable;"
-php artisan make:model Post -m
-php artisan migrate
-php artisan migrate:fresh
-php artisan migrate:status
-php artisan migrate:reset
-php artisan migrate:refresh
-php artisan migrate
-php artisan make:controller PostsApiController 
-```
+### Premium Partners
 
-### Insert fake/sample data to database
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
-**$ php artisan tinker**
+## Contributing
 
-```
-Psy Shell v0.10.7 (PHP 8.0.3 — cli) by Justin Hileman
->>> $post = new Post;
-[!] Aliasing 'Post' to 'App\Models\Post' for this Tinker session.
-=> App\Models\Post {#3329}
->>> $post->title = 'My first post'
-=> "My first post"
->>> $post->content = 'My first blog post text...'
-=> "My first blog post text..."
->>> $post->save()
-=> true
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
->>> $post = new Post
-=> App\Models\Post {#3322}
->>> $post->title = 'My second post'
-=> "My second post"
->>> $post->content = 'My second blog post text'
-=> "My second blog post text"
->>> $post->save()
-=> true
-```
+## Code of Conduct
 
-### Database Preview
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-![sqlite laravel sample project database preview](sqlite-preview.png)
+## Security Vulnerabilities
 
-![sqlite laravel sample project database preview](sqlite-post-table-preview.png)
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## Acknowledgment
+## License
 
-<!-- https://www.youtube.com/watch?v=WDha52dbLWM -->
-I saw an Youtube video and It's encouraged me to write a similar project myself.
-
-© Copyright Max Base 2021
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
